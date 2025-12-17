@@ -1,69 +1,60 @@
-# React + TypeScript + Vite
+# Cafe Che ☕ A web application for restaurant name Cafe Che
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Technologies used
+[![Vite](https://img.shields.io/badge/Vite-Built%20with%20Vite-646CFF?style=flat&logo=vite)](https://vitejs.dev/)
+[![React](https://img.shields.io/badge/React-18+-61DAFB?style=flat&logo=react)](https://react.dev/)
+![tailwindcss](https://img.shields.io/badge/tailwindcss-%5E4.1.13-4F46E5?style=flat-square&logo=tailwindcss)
+[![TypeScript](https://img.shields.io/badge/TypeScript-Strict%20Typing-3178C6?style=flat&logo=typescript)](https://www.typescriptlang.org/)
+![lucide-react](https://img.shields.io/badge/lucide-react-%5E0.543.0-EF4444?style=flat-square&logo=lucide-react)
+![sonner](https://img.shields.io/badge/sonner-%5E2.0.7-8B5CF6?style=flat-square&logo=sonner)
 
-Currently, two official plugins are available:
+![Stars](https://img.shields.io/github/stars/ryanzam/cafe-che?style=social) ![Forks](https://img.shields.io/github/forks/ryanzam/cafe-che?style=social)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A modern React + TypeScript application built with Vite. Lightweight, fast, and configured with best practices—including Hot Module Replacement (HMR), type-safe ESLint rules, and support for both Babel and SWC-based React Fast Refresh.
 
-## Expanding the ESLint configuration
+Ideal as a starter template or boilerplate for new projects.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+*(Last updated: September 2025 – Recent fixes for responsive card layouts on small devices)*
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Features
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- 🚀 **Blazing-fast development** powered by Vite
+- ⚛️ **React 18+** with Fast Refresh
+- 🛡️ **TypeScript** for full type safety
+- 🔍 **ESLint** with modern flat config and type-aware rules
+- ⚡ Optional SWC support for even faster refresh
+- 📱 Responsive design improvements (mobile-friendly cards)
+- 🔥 Zero bloat — minimal, clean setup ready for extension
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Quick Start
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Prerequisites
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Node.js v18 or later
+- npm, yarn, or pnpm
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Installation
+
+```bash
+git clone https://github.com/ryanzam/cafe-che.git
+cd cafe-che
+npm install
+
+cafe-che/
+├── public/                  # Static assets
+├── src/                     # Source code
+│   ├── assets/              # Images, icons, etc.
+│   ├── components/          # Reusable components
+│   ├── lib/ 
+│   ├── pages/ 
+│   ├── App.tsx
+│   └── main.tsx
+├── .gitignore
+├── components.json          # Component metadata (e.g., for shadcn/ui)
+├── eslint.config.js         # Modern ESLint flat config
+├── index.html
+├── package.json
+├── tsconfig.json
+├── tsconfig.app.json
+├── tsconfig.node.json
+└── vite.config.ts
